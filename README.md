@@ -41,7 +41,16 @@ El proyecto se levantara automaticamente gracias a docker, el frontend se levant
    ```bash
    git clone https://github.com/JoelArg02/Apl-Basdas-Prueba-Arguello-Mora.git
 
-2. Ejecuta el proyecto en la carpeta raíz del proyecto.
+2. Instalar librerias
+   backend
+   ```bash
+   cd /backend
+   npm i
+   frontend
+   cd /frontend
+   npm i
+
+3. Ejecuta el proyecto en la carpeta raíz del proyecto.
     ```bash
     docker compose up
 

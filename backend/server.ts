@@ -8,13 +8,14 @@ const port: number = 3000;
 
 
 app.use(cors({
-  origin: 'http://localhost:3001',
-  methods: ['GET', 'POST'],  // Permitir los métodos GET y POST
-  credentials: true
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 204
 }));
 
-// Usar body-parser para parsear las peticiones JSON
-app.use(bodyParser.json());
+app.use(express.json());
+
+app.set('trust proxy', true);
 
 // Definir la ruta para las predicciones
 app.use('/predict', predictionRoutes);

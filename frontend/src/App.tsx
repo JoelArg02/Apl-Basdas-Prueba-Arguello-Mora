@@ -45,10 +45,7 @@ const App: React.FC = () => {
     try {
       const response = await axios.post(
         "http://localhost:3000/predict",
-        formData,
-        {
-          withCredentials: true,
-        }
+        formData
       );
       console.log(response);
       setPrediction(response.data.prediction);
